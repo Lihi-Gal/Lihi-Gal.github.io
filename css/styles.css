@@ -1,0 +1,110 @@
+/* Basic styling for cartoon portfolio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #032B44;
+}
+
+html[lang="en"] header h1 {
+    font-size: 15em;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: -20px;
+    font-family: alphakind;
+    color: #d0db9e;
+}
+
+html[lang="he"] header h1 {
+    font-size: 15em;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: -20px;
+    font-family: alphakind;
+    color: #d0db9e;
+}
+
+html[lang="en"] header h2 {
+    font-size: 6em;
+    text-align: left;
+    margin-top: -100px;
+    margin-left: -15px;
+    font-family: alphakind;
+    color: #d0db9e;
+}
+
+html[lang="he"] header h2 {
+    font-size: 6em;
+    text-align: right;
+    margin-top: -100px;
+    margin-right: 80px;
+    font-family: alphakind;
+    color: #d0db9e;
+}
+
+.language-links {
+    font-size: 2em;
+    text-align: left;
+    margin-left: -15px;
+    color: #d0db9e;
+}
+
+.language-links a {
+    color: #d0db9e;
+    font-family: alphakind;
+}
+
+@font-face {
+    font-family: 'alphakind';
+    src: url('../fonts/alphakind.ttf') format('truetype'),
+        url('../fonts/alphakind.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+html[lang="en"] .buttons {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+html[lang="he"] .buttons {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+html[lang="en"] .buttons a {
+    color: #d0db9e;
+    font-family: alphakind;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+html[lang="he"] .buttons a {
+    color: #d0db9e;
+    font-family: alphakind;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+html[lang="en"] .buttons a:hover {
+    background-color: #d0db9e;
+    color: #333;
+}
+
+html[lang="he"] .buttons a:hover {
+    background-color: #d0db9e;
+    color: #333;
+}
