@@ -64,8 +64,8 @@ html[lang="he"] header h2 {
 
 @font-face {
     font-family: 'alphakind';
-    src: url('../fonts/alphakind.ttf') format('truetype'),
-        url('../fonts/alphakind.otf') format('opentype');
+    src: url('../fonts/Alphakind.ttf') format('truetype'),
+        url('../fonts/Alphakind.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
