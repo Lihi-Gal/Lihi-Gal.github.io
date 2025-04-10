@@ -12,6 +12,19 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     background-color: #032B44;
+    transition: direction 0.5s ease, text-align 0.5s ease;
+}
+body * {
+    transition: all 0.5s ease;
+}
+
+[data-en], [data-he] {
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.language-switching [data-en], .language-switching [data-he] {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 html[lang="en"] header h1 {
@@ -24,11 +37,11 @@ html[lang="en"] header h1 {
 }
 
 html[lang="he"] header h1 {
-    font-size: 15em;
+    font-size: 16em;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: -20px;
-    font-family: alphakind;
+    font-family: Abraham-Regular;
     color: #d0db9e;
 }
 
@@ -45,8 +58,8 @@ html[lang="he"] header h2 {
     font-size: 6em;
     text-align: right;
     margin-top: -100px;
-    margin-right: 80px;
-    font-family: alphakind;
+    margin-right: 30px;
+    font-family: Abraham-Regular;
     color: #d0db9e;
 }
 
@@ -57,18 +70,16 @@ html[lang="he"] header h2 {
     color: #d0db9e;
 }
 
-.language-links a {
+.en {
     color: #d0db9e;
     font-family: alphakind;
 }
 
-@font-face {
-    font-family: 'alphakind';
-    src: url('../fonts/Alphakind.ttf') format('truetype'),
-        url('../fonts/Alphakind.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+.he {
+    color: #d0db9e;
+    font-family: Abraham-Regular;
 }
+
 html[lang="en"] .buttons {
     padding: 15px;
     margin-top: 20px;
@@ -83,6 +94,7 @@ html[lang="he"] .buttons {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    font-family: Abraham-Regular;
 }
 
 html[lang="en"] .buttons a {
@@ -94,8 +106,8 @@ html[lang="en"] .buttons a {
 
 html[lang="he"] .buttons a {
     color: #d0db9e;
-    font-family: alphakind;
-    font-size: 2em;
+    font-family: Abraham-Regular;
+    font-size: 3em;
     text-decoration: none;
 }
 
@@ -107,6 +119,39 @@ html[lang="en"] .buttons a:hover {
 html[lang="he"] .buttons a:hover {
     background-color: #d0db9e;
     color: #333;
+}
+
+html[lang="en"] footer {
+    color: #d0db9e;
+    font-family: alphakind;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 200px;
+}
+
+html[lang="he"] footer {
+    color: #d0db9e;
+    font-family: Abraham-Regular;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 200px;
+}
+
+@font-face {
+    font-family: 'alphakind';
+    src: url('../fonts/Alphakind/Alphakind.ttf') format('truetype'),
+        url('../fonts/Alphakind/Alphakind.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abraham-Regular';
+    src: url('../fonts/Abraham/Abraham-Regular.ttf') format('truetype');
+    src: url('../fonts/Abraham/Abraham-Regular.eot') format('embedded-opentype');
+    src: url('../fonts/Abraham/Abraham-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -147,14 +192,14 @@ html[lang="he"] .buttons a:hover {
     font-size: 6em; /* Much smaller font for mobile */
     margin-top: 60px;
     text-align: center;
-    flex-direction: column;
-    align-items: center;
+    word-spacing: normal; /* Control space between words */
+    white-space: nowrap; /* Keep the text on one line */
+    font-size: 5em; /* Possibly reduce size on mobile */
     }
-    
     
     html[lang="he"] header h2 {
     font-size: 3em;
-    margin-top: -30px;
+    margin-top: -40px;
     text-align: center;
     }
     
@@ -199,5 +244,14 @@ html[lang="he"] .buttons a:hover {
     text-align: center;
     width: 80%;
     margin-left: 120px;
+    }
+
+    html[lang="en"] footer { 
+    margin-top: 100px;
+    margin-left: 120px;
+    }
+    
+    html[lang="he"] footer {
+    margin-top: 100px;
     }
 }
