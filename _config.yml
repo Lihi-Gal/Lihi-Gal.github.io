@@ -1,4 +1,5 @@
 permalink: pretty
 kramdown:
+  jekyll:
+    link_only: true
   parse_block_html: false
-  
