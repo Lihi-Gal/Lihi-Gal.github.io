@@ -12,8 +12,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     background-color: #032B44;
+    background-image: url("../images/bg2.png");
+    background-size: cover;
     transition: direction 0.5s ease, text-align 0.5s ease;
+    text-shadow: 0 0 15px rgba(208, 219, 158, 0.6);
 }
+
 body * {
     transition: all 0.5s ease;
 }
@@ -36,6 +40,7 @@ html[lang="en"] header h1 {
     color: #d0db9e;
 }
 
+
 html[lang="he"] header h1 {
     font-size: 16em;
     text-align: center;
@@ -43,13 +48,16 @@ html[lang="he"] header h1 {
     margin-left: -20px;
     font-family: Abraham-Regular;
     color: #d0db9e;
+    word-spacing: normal; /* Control space between words */
+    white-space: nowrap; /* Keep the text on one line */
 }
 
 html[lang="en"] header h2 {
     font-size: 6em;
-    text-align: left;
+    text-align: right;
     margin-top: -100px;
-    margin-left: -15px;
+    /*margin-left: -15px;*/
+    margin-right: -10px;
     font-family: alphakind;
     color: #d0db9e;
 }
@@ -182,19 +190,29 @@ html[lang="he"] footer {
 
   /* Media query for mobile phones */
 @media (max-width: 480px) {
+
+    body {
+    /*background-size: 2560px 1440px;
+    background-repeat: no-repeat;
+    background-position: 7% 35%;
+    background-position: 75% 40%;*/
+    background-image: url("../images/bg.png");
+    }
+
+
     html[lang="en"] header h1{
-    font-size: 6em; /* Much smaller font for mobile */
+    font-size: 6em; 
     margin-top: 60px;
     text-align: center;
     }
     
     html[lang="he"] header h1 {
-    font-size: 6em; /* Much smaller font for mobile */
+    font-size: 6em; 
     margin-top: 60px;
     text-align: center;
     word-spacing: normal; /* Control space between words */
     white-space: nowrap; /* Keep the text on one line */
-    font-size: 5em; /* Possibly reduce size on mobile */
+    font-size: 5em; 
     }
     
     html[lang="he"] header h2 {
@@ -253,5 +271,14 @@ html[lang="he"] footer {
     
     html[lang="he"] footer {
     margin-top: 100px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+    body {
+        background-image: url("../images/bg.png");
+    }
+    html[lang="en"] header h2 { 
+        margin-right: -85px;
     }
 }
