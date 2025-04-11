@@ -1,5 +1,3 @@
 permalink: pretty
-kramdown:
-  jekyll:
-    link_only: true
-  parse_block_html: false
+keep_files: [index.html]
+
