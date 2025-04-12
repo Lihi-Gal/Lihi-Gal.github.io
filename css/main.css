@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
 body {
     line-height: 1.6;
     color: #333;
@@ -14,8 +23,8 @@ body {
     background-color: #032B44;
     background-image: url("../images/bg2.png");
     background-size: cover;
-    transition: direction 0.5s ease, text-align 0.5s ease;
     text-shadow: 0 0 15px rgba(208, 219, 158, 0.6);
+    animation: fadeIn 1s ease-in;
 }
 
 body * {
@@ -35,6 +44,10 @@ body * {
     transform: translateY(10px);
 }
 
+.en a:hover, .he a:hover {
+    color: #0235dd;
+    
+}
 html[lang="en"] header h1 {
     font-size: 15em;
     text-align: center;
@@ -48,7 +61,7 @@ html[lang="en"] header h1 {
 html[lang="he"] header h1 {
     font-size: 16em;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: -20px;
     font-family: Abraham-Regular;
     color: #d0db9e;
@@ -98,6 +111,7 @@ html[lang="en"] .buttons {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    animation: fadeIn 1.5s ease-in;
 }
 
 html[lang="he"] .buttons {
@@ -107,6 +121,7 @@ html[lang="he"] .buttons {
     display: flex;
     justify-content: space-between;
     font-family: Abraham-Regular;
+    animation: fadeIn 1.5s ease-in;
 }
 
 html[lang="en"] .buttons a {
@@ -114,6 +129,7 @@ html[lang="en"] .buttons a {
     font-family: alphakind;
     font-size: 2em;
     text-decoration: none;
+    position: relative;
 }
 
 html[lang="he"] .buttons a {
@@ -121,17 +137,48 @@ html[lang="he"] .buttons a {
     font-family: Abraham-Regular;
     font-size: 3em;
     text-decoration: none;
+    position: relative;
 }
 
+html[lang="he"] .buttons a::after { 
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0235dd;
+    transition: width 0.3s ease;
+}
+
+html[lang="en"] .buttons a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0235dd;
+    transition: width 0.3s ease;
+}
+
+
 html[lang="en"] .buttons a:hover {
-    background-color: #d0db9e;
-    color: #333;
+    color: #0235dd;
+}
+
+html[lang="en"] .buttons a:hover::after {
+    width: 100%;
 }
 
 html[lang="he"] .buttons a:hover {
-    background-color: #d0db9e;
-    color: #333;
+    color: #0235dd;
 }
+
+html[lang="he"] .buttons a:hover::after {
+    width: 100%;
+}
+
 
 html[lang="en"] footer {
     color: #d0db9e;
@@ -139,6 +186,7 @@ html[lang="en"] footer {
     font-size: 1em;
     text-align: center;
     margin-top: 200px;
+    animation: fadeIn 2s ease-in;
 }
 
 html[lang="he"] footer {
@@ -146,7 +194,8 @@ html[lang="he"] footer {
     font-family: Abraham-Regular;
     font-size: 1.2em;
     text-align: center;
-    margin-top: 185px;
+    margin-top: 205px;
+    animation: fadeIn 2s ease-in;
 }
 
 @font-face {
@@ -205,14 +254,14 @@ html[lang="he"] footer {
 
 
     html[lang="en"] header h1{
-    font-size: 6em; 
+    font-size: 4em; 
     margin-top: 60px;
     text-align: center;
     }
     
     html[lang="he"] header h1 {
     font-size: 6em; 
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
     word-spacing: normal; /* Control space between words */
     white-space: nowrap; /* Keep the text on one line */
@@ -229,7 +278,7 @@ html[lang="he"] footer {
     font-size: 3em;
     margin-top: -30px;
     text-align: center;
-    margin-left: 120px;
+    
     }
 
     html[lang="he"].language-links {
@@ -245,12 +294,13 @@ html[lang="he"] footer {
     html[lang="he"] .buttons {
     flex-direction: column;
     align-items: center;
+    font-size: 0.8em; 
     }
     
     html[lang="en"] .buttons {
     flex-direction: column;
     align-items: center;
-    margin-left: 120px;
+    
     }
     
     html[lang="he"].buttons a {
@@ -265,12 +315,12 @@ html[lang="he"] footer {
     padding: 10px 20px;
     text-align: center;
     width: 80%;
-    margin-left: 120px;
+    
     }
 
     html[lang="en"] footer { 
     margin-top: 100px;
-    margin-left: 120px;
+    
     }
     
     html[lang="he"] footer {

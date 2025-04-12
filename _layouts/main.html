@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {% if page.lang == 'he' %}{{ site.data.translations.he.site.title }}{% else %}{{ site.data.translations.en.site.title }}{% endif %}</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="{{ page.lang | default: 'en' }}">
@@ -14,8 +14,8 @@
     </div>
     
     <header>
-        <h1>{% if page.lang == 'he' %}תיק עבודות{% else %}PORTFOLIO{% endif %}</h1>
-        <h2>{% if page.lang == 'he' %}ליהי גל{% else %}Lihi Gal{% endif %}</h2>
+        <h1>{% if page.lang == 'he' %}{{ site.data.translations.he.site.title }}{% else %}{{ site.data.translations.en.site.title }}{% endif %}</h1>
+        <h2>{% if page.lang == 'he' %}{{ site.data.translations.he.site.author }}{% else %}{{ site.data.translations.en.site.author }}{% endif %}</h2>
     </header>
     
     <div class="buttons">
