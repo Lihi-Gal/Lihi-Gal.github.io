@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {% if page.lang == 'he' %}{{ site.data.translations.he.site.title }}{% else %}{{ site.data.translations.en.site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="{{ page.lang | default: 'en' }}">
+    <div class="language-links">
+        <a class="en" href="/en/">En</a>
+        <span class="separator"> | </span>
+        <a class="he" href="/he/">עב</a>
+    </div>
+    
+    <header>
+        <h1>{% if page.lang == 'he' %}תיק עבודות{% else %}PORTFOLIO{% endif %}</h1>
+        <h2>{% if page.lang == 'he' %}ליהי גל{% else %}Lihi Gal{% endif %}</h2>
+    </header>
+    
+    <div class="buttons">
+        <a href="../pages/work-in-progress/" class="button">
+            {% if page.lang == 'he' %}{{ site.data.translations.he.nav.animation }}{% else %}{{ site.data.translations.en.nav.animation }}{% endif %}
+        </a>
+        <a href="../pages/work-in-progress/" class="button">
+            {% if page.lang == 'he' %}{{ site.data.translations.he.nav.storyboard }}{% else %}{{ site.data.translations.en.nav.storyboard }}{% endif %}
+        </a>
+        <a href="../pages/work-in-progress/" class="button">
+            {% if page.lang == 'he' %}{{ site.data.translations.he.nav.concept_art }}{% else %}{{ site.data.translations.en.nav.concept_art }}{% endif %}
+        </a>
+        <a href="../pages/work-in-progress/" class="button">
+            {% if page.lang == 'he' %}{{ site.data.translations.he.nav.about }}{% else %}{{ site.data.translations.en.nav.about }}{% endif %}
+        </a>
+    </div>
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    {% include footer.html %}
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

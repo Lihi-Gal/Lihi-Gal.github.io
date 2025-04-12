@@ -1,0 +1,7 @@
+site:
+  title: "Lihi's Animation Portfolio"
+nav:
+  animation: "Animation"
+  storyboard: "Storyboard"
+  concept_art: "Concept Art"
+  about: "About"
