@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/transitions.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico">
 </head>
-<body class="{{ page.lang | default: 'en' }}">
+<body>
     <div class="language-links">
         <a class="en" href="/en/">En</a>
         <span class="separator"> | </span>
@@ -28,17 +30,20 @@
         <a href="{{ site.baseurl }}/pages/work-in-progress/" class="button">
             {% if page.lang == 'he' %}{{ site.data.translations.he.nav.concept_art }}{% else %}{{ site.data.translations.en.nav.concept_art }}{% endif %}
         </a>
-        <a href="{{ site.baseurl }}/pages/work-in-progress/" class="button">
+        <a href="about" class="button">
             {% if page.lang == 'he' %}{{ site.data.translations.he.nav.about }}{% else %}{{ site.data.translations.en.nav.about }}{% endif %}
         </a>
     </div>
     
-    <main>
+    <div class="background-container">
+        <div class="sliding-background"></div>
+    </div>
+    <div class="content-container">
         {{ content }}
-    </main>
-    
+    </div>
+
     {% include footer.html %}
     
-    <script src="/js/main.js"></script>
+    <script src="/js/transitions.js"></script>
 </body>
 </html>

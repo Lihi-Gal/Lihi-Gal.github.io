@@ -22,17 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function highlightActiveLanguage(lang) {
-    // Highlight active language link
-    const langLinks = document.querySelectorAll('.language-links a');
-    langLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.classList.contains(lang)) {
-            link.classList.add('active');
-        }
-    });
-}
-
 function switchToLanguage(lang) {
     // Apply transition effect
     document.body.classList.add('language-switching');
@@ -75,6 +64,16 @@ function checkLanguageRedirect() {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const background = document.querySelector('.sliding-background');
+    background.style.animation = 'none';
+    
+    setTimeout(function() {
+        background.style.animation = 'slideUp 1.8s ease-out';
+    }, 10);
+    });
+
 
 // Run language redirect check once when page loads
 // Uncomment this if you want automatic redirection based on saved preference

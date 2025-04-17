@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/transitions.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.ico">
+</head>
+<body>
+    <div class="language-links">
+        <a class="en" href="/en/">En</a>
+        <span class="separator"> | </span>
+        <a class="he" href="/he/">עב</a>
+    </div>
+    
+    <header>
+        <h1>{% if page.lang == 'he' %}{{ site.data.translations.he.site.title }}{% else %}{{ site.data.translations.en.site.title }}{% endif %}</h1>
+        <h2>{% if page.lang == 'he' %}{{ site.data.translations.he.site.author }}{% else %}{{ site.data.translations.en.site.author }}{% endif %}</h2>
+    </header>
+    
+    <div class="buttons">
+        <a href="{{ site.baseurl }}/" class="button">
+            back
+        </a>
+    </div>
+    
+    <div class="background-container">
+        <div class="sliding-background"></div>
+    </div>
+    <div class="content-container">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+    
+    <script src="/js/transitions.js"></script>
+</body>
+</html>

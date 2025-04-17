@@ -1,0 +1,120 @@
+/* Page transition animations */
+
+/* Exit animations - elements slide off screen */
+.page-exit header h1 {
+    transform: translateX(-100vw);
+    transition: transform 0.8s ease-in-out;
+}
+
+.page-exit header h2 {
+    transform: translateX(100vw);
+    transition: transform 1.7s ease-in-out;
+}
+
+.page-exit .buttons {
+    transform: translateY(100vh);
+    transition: transform 1.6s ease-in-out;
+}
+
+.page-exit .language-links {
+    transform: translateY(-100vh);
+    transition: transform 1.5s ease-in-out;
+}
+
+/* Force background to always animate with !important */
+body.page-exit .sliding-background {
+    animation: none !important;
+    transform: translateY(100vh) !important;
+    transition: transform 1.8s ease-in-out !important;
+}
+
+body.page-exit .background-container {
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+}
+
+/* Prepare entrance - position elements off screen initially */
+.page-enter-prep header h1 {
+    transform: translateX(100vw);
+    transition: none;
+}
+
+.page-enter-prep header h2 {
+    transform: translateX(-100vw);
+    transition: none;
+}
+
+.page-enter-prep .buttons {
+    transform: translateY(-100vh);
+    transition: none;
+}
+
+.page-enter-prep .language-links {
+    transform: translateY(100vh);
+    transition: none;
+}
+
+/* Force background initial position */
+body.page-enter-prep .sliding-background {
+    animation: none !important;
+    transform: translateY(-100vh) !important;
+    transition: none !important;
+}
+
+body.page-enter-prep .background-container {
+    opacity: 0;
+    transition: none;
+}
+
+/* Entrance animations - elements slide into screen */
+.page-enter header h1 {
+    transform: translateX(0);
+    transition: transform 3.8s ease-out;
+}
+
+.page-enter header h2 {
+    transform: translateX(0);
+    transition: transform 3.7s ease-out;
+}
+
+.page-enter .buttons {
+    transform: translateY(0);
+    transition: transform 0.6s ease-out;
+}
+
+.page-enter .language-links {
+    transform: translateY(0);
+    transition: transform 1.5s ease-out;
+}
+
+/* Force background to animate in */
+body.page-enter .sliding-background {
+    animation: none !important;
+    transform: translateY(0) !important;
+    transition: transform 1.8s ease-out !important;
+}
+
+body.page-enter .background-container {
+    opacity: 1;
+    transition: opacity 1.8s ease-out;
+}
+
+/* Ensure all elements have transitions applied */
+header h1, header h2, .buttons, .language-links, 
+.sliding-background, .background-container {
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Add background slide animation to about page */
+.sliding-background {
+    animation: slideUp 1.0s ease-out;
+}
+
+/* Override any conflicting animations for transitions */
+body.page-exit .sliding-background,
+body.page-enter-prep .sliding-background,
+body.page-enter .sliding-background {
+    animation: none !important;
+}
